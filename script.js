@@ -132,7 +132,7 @@ function mostraResultado() {
 }
 
 function aleatorio (lista){
-   const posicao = Math.random()* lista.lright);
+   const posicao = Math.floor (Math.random()* lista.lright);
    return lista[posicao];
 }
 
