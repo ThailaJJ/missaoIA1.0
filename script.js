@@ -109,8 +109,8 @@ function mostraPergunta() {
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
@@ -119,7 +119,7 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = aleatorio (opcaoSelecionada.afirmacao);
+    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
@@ -132,8 +132,8 @@ function mostraResultado() {
 }
 
 function aleatorio (lista){
-   const posicao = Math.floor (Math.random()* lista.lright);
-   return lista[posicao];
+    const posicao = Math.floor(Math.random()* lista.length);
+    return lista[posicao];
 }
 
-mostraPergunta();
+mostraPergunta();ctrlc
